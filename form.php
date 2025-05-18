@@ -1,41 +1,24 @@
 <?php
 
+$name = isset($_POST['name']) ? trim($_POST['name']) : '';
+$email = isset($_POST['email']) ? trim($_POST['email']) : '';
+$address = isset($_POST['address']) ? trim($_POST['address']) : '';
 
-$name = $_POST['name']."\n";
-
-$email = $_POST['email']."\n";
-
-$address = $_POST['address']."\n";
-
-
-// echo "<h1> $name </h1>";
-
-// var_dump($name);
-
-
-
-if(empty($name) || isset($name) )
-{
+if (empty($name)) {
     echo "name is empty";
-}else{
+} else {
     echo "<h1>$name</h1>";
 }
 
-
-if(empty($email)  || isset($email))
-{
+if (empty($email)) {
     echo "email is empty";
-}else{
+} else {
     echo "<h2>$email</h2>";
 }
 
-
-
-
-if(empty($address)  || isset($address))
-{
+if (empty($address)) {
     echo "address is empty";
-}else{
+} else {
     echo "<h3>$address</h3>";
 }
 ?>
