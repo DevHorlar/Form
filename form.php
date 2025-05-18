@@ -14,11 +14,28 @@ $address = $_POST['address']."\n";
 
 
 
-if( isset($name) && !empty($name) )
+if(empty($name) || isset($name) )
 {
-    echo "Benedict the name is empty";
+    echo "name is empty";
+}else{
+    echo "<h1>$name</h1>";
+}
+
+
+if(empty($email)  || isset($email))
+{
+    echo "email is empty";
+}else{
+    echo "<h2>$email</h2>";
 }
 
 
 
+
+if(empty($address)  || isset($address))
+{
+    echo "address is empty";
+}else{
+    echo "<h3>$address</h3>";
+}
 ?>
