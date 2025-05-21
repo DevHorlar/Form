@@ -14,6 +14,13 @@ $mail = mail($to, $subject, $message, $additional_headers);
 if($mail)
 {
     echo "Message sent";
+
+    $fp = fopen("ben.txt","a");
+
+    fputs($fp,$message);
+    
+    fclose($fp);
+
 }
 
 
