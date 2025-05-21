@@ -11,14 +11,16 @@ $message = "'$name' . '$email' . '$address'";
 $additional_headers = "additional headers";
 $mail = mail($to, $subject, $message, $additional_headers);
 
+$new = "$subject . $message . $additional_headers";
+
 if($mail)
 {
     echo "Message sent";
 
     $fp = fopen("ben.txt","a");
 
-    fputs($fp,$message);
-    
+    fputs($fp,$new);
+
     fclose($fp);
 
 }
